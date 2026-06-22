@@ -1,9 +1,10 @@
 package com.test.webservice.facade.impl;
 
 import com.test.webservice.facade.TestWebService;
+import jakarta.jws.WebService;
 import org.springframework.stereotype.Service;
 
-import javax.jws.WebService;
+
 
 
 @WebService(serviceName = "TestWebService",

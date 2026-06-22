@@ -7,11 +7,8 @@ import com.test.dao.inter.PbocDataDao;
 import com.test.domain.entity.PbocData;
 import com.test.service.PbocDataService;
 import com.test.webapi.dto.input.GetPbocDataListReqDto;
-import com.test.webapi.dto.output.GetPbocDataListResDto;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 @Service
 public class PbocDataServiceImpl implements PbocDataService {

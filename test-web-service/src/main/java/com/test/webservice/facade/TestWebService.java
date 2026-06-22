@@ -1,9 +1,9 @@
 package com.test.webservice.facade;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebService;
 
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
 
 @WebService(name = "TestService", // 暴露服务名称
         targetNamespace = "http://server.webservice.test.com"// 命名空间,一般是接口的包名倒序

@@ -2,12 +2,6 @@ package com.test.common.utils;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.axis.client.Call;
-import org.apache.axis.client.Service;
-import org.apache.axis.constants.Style;
-import org.apache.axis.constants.Use;
-import org.apache.axis.description.OperationDesc;
-import org.apache.axis.description.ParameterDesc;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.*;
 import org.apache.http.client.config.RequestConfig;

@@ -29,7 +29,7 @@ public class RedisConfig {
      */
     private void setSerializer(RedisTemplate<String, Object> redisTemplate){
         //序列化方式采用string
-        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+        StringRedisSerializer  stringRedisSerializer = new StringRedisSerializer();
         //序列化方式采用jackson
         Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
         ObjectMapper om = new ObjectMapper();
