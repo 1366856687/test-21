@@ -3,7 +3,6 @@ package com.test.common.config;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,13 +18,16 @@ public class MybatisPlusConfig {
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        PaginationInnerInterceptor paginationInnerInterceptor = new PaginationInnerInterceptor(DbType.MYSQL);
-        paginationInnerInterceptor.setOptimizeJoin(true);
+        // 分页插件：新版先无参构造，再setDbType
+        PaginationInnerInterceptor paginationInnerInterceptor = new PaginationInnerInterceptor();
         paginationInnerInterceptor.setDbType(DbType.MYSQL);
+        paginationInnerInterceptor.setOptimizeJoin(true);
         paginationInnerInterceptor.setOverflow(true);
-        interceptor.addInnerInterceptor(paginationInnerInterceptor); // 分页插件
+        interceptor.addInnerInterceptor(paginationInnerInterceptor);
+
+        // 乐观锁插件
         OptimisticLockerInnerInterceptor optimisticLockerInnerInterceptor = new OptimisticLockerInnerInterceptor();
-        interceptor.addInnerInterceptor(optimisticLockerInnerInterceptor); // 乐观锁插件
+        interceptor.addInnerInterceptor(optimisticLockerInnerInterceptor);
         return interceptor;
     }
 }
