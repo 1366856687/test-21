@@ -1,4 +1,4 @@
-package com.test.web.event;
+package com.test.event;
 
 import lombok.Getter;
 import lombok.Setter;
