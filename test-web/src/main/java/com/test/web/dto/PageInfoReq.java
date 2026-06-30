@@ -1,4 +1,4 @@
-package com.test.webapi.dto;
+package com.test.web.dto;
 
 import lombok.Getter;
 import lombok.Setter;

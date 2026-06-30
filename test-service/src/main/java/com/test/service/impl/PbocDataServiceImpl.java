@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.test.dao.inter.PbocDataDao;
 import com.test.domain.entity.PbocData;
 import com.test.service.PbocDataService;
-import com.test.webapi.dto.input.GetPbocDataListReqDto;
+import com.test.web.dto.input.GetPbocDataListReqDto;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

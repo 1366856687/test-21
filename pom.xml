@@ -19,6 +19,8 @@
         <module>test-web-api</module>
         <module>test-web</module>
         <module>test-web-service</module>
+        <module>test-boot</module>
+        <module>test-job</module>
     </modules>
 
     <properties>
@@ -85,6 +87,13 @@
             <dependency>
                 <groupId>com.test</groupId>
                 <artifactId>test-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 启动模块 -->
+            <dependency>
+                <groupId>com.test</groupId>
+                <artifactId>test-boot</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

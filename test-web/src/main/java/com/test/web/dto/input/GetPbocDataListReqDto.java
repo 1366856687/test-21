@@ -1,6 +1,6 @@
-package com.test.webapi.dto.input;
+package com.test.web.dto.input;
 
-import com.test.webapi.dto.PageInfoReq;
+import com.test.web.dto.PageInfoReq;
 import lombok.Getter;
 import lombok.Setter;
 
